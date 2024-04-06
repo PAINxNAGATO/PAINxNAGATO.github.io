@@ -1,0 +1,62 @@
+{{ define "main"}}
+<div>
+    <div class='mainbg'>
+        <video autoplay muted loop>
+            {{ if .Site.Params.background }}
+            <source src="{{ .Site.Params.background }}" type="video/mp4">
+            {{ else }}
+            <source src="bg.mp4" type="video/mp4">
+            {{ end }}
+        </video>
+        <div class='content'>
+            <div>
+                <div class='contenthead'>
+                    <h3 class='contentheading'>{{ .Site.Params.title }}</h3>
+                </div>
+                <div class='contenttypewritter animatedText'></div>
+                <div class='contentbtn'>
+                    {{ range .Site.Params.links }}
+                    <a href="{{ .url }}" class='btn btn-outline-light' role='button' target="_blank">{{ .name }}</a>
+                    {{ end }}
+                </div>
+                <p><br>Hello, I'm a undergrad from Indian Institute of Information Technology Kalyani and a software
+                    developer.
+                    <br>I have a keen interest in Deep Learning and various other machine Learning Algorithm, operating
+                    systems, and Linux.
+                    <br>Recently, I've delved into learning Bitcoin development and verification.I find solace in
+                    reading, playing Football, competitive coding.
+                    <br>I love to immerse myself in anime, sketch in my free time, produce music, and I love working
+                    out.
+                </p>
+            </div>
+            <div>
+                <p>Hey, you can find me on these</p>
+            </div>
+            <div class="social-icons-container" style="text-align: center; display: flex; justify-content: center; flex-direction: row;">
+                <!-- Replace "#" with the appropriate links -->
+                <div class="social-icon" style="margin-right: 20px;">
+                    <a href="https://discord.com/channels/pain1536" style="color: #ffffff; font-size: 2em;">
+                        <i id="discord-icon" class="fab fa-discord"></i>
+                    </a>
+                </div>
+    
+                <div class="social-icon" style="margin-right: 20px;">
+                    <a href="mailto:harshrawat349@gmail.com" style="color: #ffffff; font-size: 2em;">
+                        <i id="gmail-icon" class="fas fa-envelope"></i>
+                    </a>
+                </div>
+    
+                <!-- Add more social media icons as needed -->
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- </div> -->
+
+<!-- JS for typewritter -->
+<script>
+    const textArray = {{ .Site.Params.phrases | jsonify | safeJS }};
+</script>
+<script src='/js/script.js'></script>
+{{ end }}

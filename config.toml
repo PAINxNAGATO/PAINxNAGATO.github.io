@@ -1,0 +1,15 @@
+baseURL = "http://glim-midnight.pages.dev"
+languageCode = "en-us"
+theme = "glim-midnight"
+
+[params]
+    title = "Harsh Singh Rawat"
+    phrases = ["Student at IIIT Kalyani","Machine Learning Enthusiast","Software Developer","Bitcoin Developer"]
+    links = [
+    {name = "Github", url = "https://github.com/PAINxNAGATO"},
+    {name = "LinkedIn", url = "https://www.linkedin.com/in/harsh-rawat-787pxn/"},
+    {name = "Twitter", url = "https://twitter.com/Rawat_harsh_18"},
+    ]
+    welcomeMessage = "Welcome to my website!"
+    background = "bg.mp4"
+    
